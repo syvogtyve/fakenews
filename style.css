@@ -1,0 +1,105 @@
+/* Importando uma fonte divertida do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    background-color: #61cad1; /* Um cinza claro para o fundo, como em apps de chat */
+    background-image: url(img/azulzinho.jpg);
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    max-width: 600px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 7px 20px rgba(0, 84, 105, 0.185);
+}
+
+h1 {
+    color: #333;
+    font-weight: 600;
+}
+
+.chat-area {
+    height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    overflow-y: auto; /* Adiciona uma barra de rolagem se o conteúdo for muito grande */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espaço entre as bolhas de chat */
+}
+
+/* Estilo geral das bolhas de chat */
+.chat-bubble {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 80%;
+    word-wrap: break-word; /* Garante que o texto quebre a linha */
+}
+
+.chat-line {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: flex-end; /* Alinha a imagem e a bolha na parte inferior */
+}
+
+/* Ajusta o alinhamento da linha de chat do usuário para a direita */
+.chat-line.user-line {
+    justify-content: flex-end;
+}
+
+
+/* 2. Estilo da imagem de perfil do bot */
+.bot-profile-pic {
+    width: 40px; /* Tamanho da foto */
+    height: 40px;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    object-fit: cover;
+    margin-right: 10px; /* Espaço entre a imagem e a bolha */
+}
+
+
+/* Bolha de chat do bot */
+.bot-bubble {
+    background-color: #e9e9eb;
+    color: #333;
+    align-self: flex-start; /* Alinha à esquerda */
+    border-bottom-left-radius: 5px;
+}
+
+/* Bolha de chat do usuário */
+.user-bubble {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end; /* Alinha à direita */
+    border-bottom-right-radius: 5px;
+}
+
+.bot-response-area {
+    font-size: 1.2rem;
+    font-weight: 600;
+    min-height: 30px; /* Garante um espaço mesmo quando vazio */
+}
+
+/* Ajustes para telas menores (celulares) */
+@media (max-width: 576px) {
+    .game-container {
+        padding: 1rem;
+    }
+
+    .chat-area {
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
